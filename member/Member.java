@@ -30,14 +30,17 @@ public class Member {
         return seat;
     }
 
+    // 자리 설정
     public void setSeat(int seat) {
         this.seat = seat;
     }
 
+    // 시간당 가격 * 3 반환
     public int getMoney() {
         return payForHour * 3;
     }
 
+    // 정규 회원이 아닌 경우에 -1 반환
     public int getNum() {
         return -1;
     }

@@ -4,7 +4,6 @@ public class RegularMember extends Member{
 
     private static int Number = 1;
     private int memberNum;
-
     private int money = 10000;
 
     public RegularMember(String name, String number, boolean student) {
@@ -13,6 +12,7 @@ public class RegularMember extends Member{
         Number++;
     }
 
+    // 정규 회원인 경우 돈 계산
     @Override
     public int getMoney() {
         if (money - super.getMoney() >= 0) {
@@ -24,6 +24,7 @@ public class RegularMember extends Member{
         }
     }
 
+    // 정규 회원의 경우 회원 번호 반환
     @Override
     public int getNum() {
         return memberNum;
