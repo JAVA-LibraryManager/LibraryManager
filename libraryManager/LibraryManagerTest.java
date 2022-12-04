@@ -5,9 +5,12 @@ import java.util.Scanner;
 public class LibraryManagerTest {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        LibraryManager library = new LibraryManager("C:\\Users\\user\\Desktop\\JAVA Project\\seat.txt");
+//        Scanner sc = new Scanner(System.in);
+        LibraryManager library = new LibraryManager("src/seat.txt");
 //        library.start(sc);
+
+
+
 
         int[] regularSeat = Seat.RegularSeat();
 
@@ -45,7 +48,9 @@ public class LibraryManagerTest {
         }
         System.out.println();
 
-        sc.close();
+//        sc.close();
+
+
     }
 
 }

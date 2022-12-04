@@ -14,7 +14,23 @@ public class LibraryManager {
 
     }
 
-    void start(Scanner sc) {
+    public void start(Scanner sc) {
+
+    }
+
+    public void register() {
+
+    }
+
+    public void withdraw() {
+
+    }
+
+    public void in() {
+
+    }
+
+    public void out() {
 
     }
 
