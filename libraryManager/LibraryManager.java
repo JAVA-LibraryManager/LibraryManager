@@ -1,8 +1,16 @@
 package libraryManager;
 
+import java.util.Arrays;
 import java.util.Scanner;
+import java.util.stream.Stream;
 
 public class LibraryManager {
+    private int[] seat;
+    private int[][] result;
+
+    public int[][] getResult() {
+        return result;
+    }
 
     static String file;
 
@@ -12,6 +20,21 @@ public class LibraryManager {
 
         Seat.AllSeat();
 
+    }
+
+    public void seat(int[] seat) {
+        this.seat = seat;
+        result = new int[4][4];
+        for (int i = 0; i < Seat.AllSeat.length; i++) {
+            for (int j = 0; j < Seat.AllSeat[i].length; j++) {
+                for (int k = 0; k < seat.length; k++) {
+                    if (Seat.AllSeat[i][j] == seat[k]) {
+                        result[i][j] = seat[k];
+                        break;
+                    }
+                }
+            }
+        }
     }
 
     // 시작
