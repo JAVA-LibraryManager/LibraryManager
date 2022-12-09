@@ -1,11 +1,8 @@
 package libraryManager;
 
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.Arrays;
-import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class Seat {
