@@ -44,7 +44,6 @@ public class Seat {
                     .mapToInt(h -> Integer.parseInt(h))
                     .toArray();
 
-
             return seat;
 
         } catch (IOException e) {

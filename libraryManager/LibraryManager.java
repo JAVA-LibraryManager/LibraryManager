@@ -137,19 +137,36 @@ public class LibraryManager {
         }
     }
 
-    // 회원 탈퇴
-    public void withdraw() {
-
-    }
-
-    // 입실
-    public void in() {
-
-    }
-
     // 퇴실
     public void out() {
-
+        Scanner en = new Scanner(System.in);
+        System.out.println("--> 좌석번호 입력 : ");
+//                int chair=en.nextInt()if((AllSeat[chair]>=ox24eb+1 && AllSeat[chair]<=ox24eb+5) || (AllSeat[chair] <= 0x2776+10&&AllSeat[chair] >= 0x2776+1)) {
+//                   if(AllSeat[chair].member ==정기이용회원){
+//                          if(//chair 자리의 멤버의 돈>3000)
+//                {
+//                        System.out.println("정산 후 남은 요금은"+money-3000+"입니다. 감사합니다 !!");
+//                        System.out.println(chair+"좌석 퇴장완료")
+//                        AllSeat[chair]=0x2460+chair;
+//                }
+//        else if(//chair 자리의 멤버의 돈<3000)
+//                {
+//                        System.out.println("충전금액이 모자라서 자동으로 만원 충전됩니다.");
+//                        member.money+=10000;
+//                    System.out.println("정산 후 남은 요금은"+money-3000+"입니다. 감사합니다 !!");
+//                    System.out.println(chair+"좌석 퇴장완료");
+//                        AllSeat[chair]=0x2460+chair;
+//                }
+//                }
+//                  else {
+//                      System.out.println("정산요금은 3000원 입니다. 감사합니다!!");
+//                      System.out.println("chair"+좌석 퇴장완료);
+//                      AllSeat[chair]=ox2460+chair;
+//                }
+//                        }
+//        else{
+//            System.out.println("좌석번호가 올바르지 않습니다. ");
+//        }
+//            }
     }
-
 }
