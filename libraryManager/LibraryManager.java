@@ -4,7 +4,10 @@ import member.Member;
 import member.RegularMember;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
+
+import static libraryManager.Seat.AllSeat;
 
 public class LibraryManager {
     private int[][] result;
@@ -21,21 +24,21 @@ public class LibraryManager {
 
         this.file = file;
 
-        Seat.AllSeat();
+        AllSeat();
 
         memberList = new ArrayList<>();
     }
 
     public void seat(int[] seat) {
         result = new int[4][4];
-        for (int i = 0; i < Seat.AllSeat.length; i++) {
-            for (int j = 0; j < Seat.AllSeat[i].length; j++) {
-                if(Seat.AllSeat[i][j] < 0) {
-                    result[i][j] = Seat.AllSeat[i][j];
+        for (int i = 0; i < AllSeat.length; i++) {
+            for (int j = 0; j < AllSeat[i].length; j++) {
+                if(AllSeat[i][j] < 0) {
+                    result[i][j] = AllSeat[i][j];
                     break;
                 }
                 for (int k = 0; k < seat.length; k++) {
-                    if (Seat.AllSeat[i][j] == seat[k]) {
+                    if (AllSeat[i][j] == seat[k]) {
                         result[i][j] = seat[k];
                         break;
                     }
@@ -149,7 +152,36 @@ public class LibraryManager {
 
     // 퇴실
     public void out() {
-
+        Scanner sc = new Scanner(System.in);
+        System.out.println("--> 좌석번호 입력: ");
+        int chair=sc.nextInt();
+//        if((AllSeat[chair]>=0x2776 &&AllSeat[chair]<=0x2776+10) ||(AllSeat[chair]>=0x24eb &&AllSeat[chair]<=0x24eb+6)){ //숫자를 어떻게 가져와야 하죠..?
+//            if(비정규 회원일시){
+//                System.out.println("정산요금은 3000원입니다. 감사합니다.");
+//                System.out.println(chair+"좌석 퇴장완료");
+//                AllSeat.chair=0x2460+chair;
+//            }
+//            else if(정규 회원일시){
+//                if(money>3000){
+//                    money-=3000;
+//                    System.out.println("정산후 남은 요금은 "+money+"입니다.");
+//                    System.out.println(chair+"좌석 퇴장완료");
+//                    AllSeat.chair=0x2460+chair;
+//                }
+//                else {
+//                    System.out.println("충전금액이 모자라서 자동으로 만원충전합니다");
+//                    money+=7000;
+//                    System.out.println("정산후 남은 요금은 "+money+"입니다.");
+//                    System.out.println(chair+"좌석 퇴장완료");
+//                    AllSeat.chair=0x2460+chair;
+//                }
+//            }
+//        }
+//        else{
+//            System.out.println("잘못 입력하셨습니다.");
+//            System.out.println("--> 좌석번호 입력: ");
+//            chair=sc.nextInt();
+//        }
     }
 
 }
