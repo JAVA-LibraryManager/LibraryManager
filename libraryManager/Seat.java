@@ -7,7 +7,7 @@ import java.util.stream.Stream;
 
 public class Seat {
 
-    public static int[][] AllSeat = new int[4][4];
+    public static int[][] AllSeat;
 
     public static void AllSeat() {
 
@@ -18,6 +18,16 @@ public class Seat {
                     .filter(f -> f.length() <= 2)
                     .mapToInt(g -> Integer.parseInt(g))
                     .toArray();
+
+            Stream<String> stream2 = Files.lines(Path.of(LibraryManager.file));
+
+            int[] size = stream2.limit(2)
+                    .mapToInt(e -> Integer.parseInt(e))
+                    .toArray();
+
+            int num1 = size[0], num2 = size[1];
+
+            AllSeat = new int[num1][num2];
 
             int num = 0;
             for (int i = 0; i < 4; i++) {

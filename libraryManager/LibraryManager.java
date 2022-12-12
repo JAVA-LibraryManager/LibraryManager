@@ -29,10 +29,7 @@ public class LibraryManager {
         for (int i = 0; i < result.length; i++) {
             for (int j = 0; j < result[i].length; j++) {
                 for (int k = 0; k < seat.length; k++) {
-                    if (result[i][j] < 0) {
-                        break;
-                    }
-                    if (seat[k] == result[i][j]) {
+                    if (seat[k] == Math.abs(result[i][j])) {
                         break;
                     }
                     if (k == seat.length - 1) {
@@ -41,6 +38,8 @@ public class LibraryManager {
                 }
             }
         }
+
+
 
         printSeat();
     }
@@ -65,7 +64,7 @@ public class LibraryManager {
                 } else if (j < 0) {
                     j1 = Math.abs(j); // j를 절대값으로 반환
                     if (j1 > 10) {
-                        System.out.printf("%2c", 0x24ea + (j1 - 10)); // 이미 착석 11 ~
+                        System.out.printf("%2c ", 0x24ea + (j1 - 10)); // 이미 착석 11 ~
                     } else {
                         System.out.printf("%2c ", 0x2775+j1); //0x2776 / 비규회원 1 / 이미 착석 좌석 1 ~ 10
                     }
