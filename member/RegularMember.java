@@ -13,16 +13,18 @@ public class RegularMember extends Member{
     }
 
     // 정규 회원인 경우 돈 계산
+
     @Override
-    public int getMoney() {
-        if (money - super.getMoney() >= 0) {
-            money -= super.getMoney();
-            return money;
+    public int calcMoney() {
+        if (money < super.calcMoney()) {
+            money = money + 10000 - super.calcMoney();
+            System.out.println("충전금액이 모자라서 자동으로 만원 충전됩니다.");
         } else {
-            money -= (10000 - super.getMoney());
-            return money;
+            money -= super.calcMoney();
         }
+        return money;
     }
+
 
     // 정규 회원의 경우 회원 번호 반환
     @Override
