@@ -12,9 +12,10 @@ public class LibraryManagerTest {
         LibraryManager library = new LibraryManager("src/seat.txt");
         library.start(sc);
 
-        for (Member m : library.memberList) {
-            System.out.println(m.getName() + " " + m.getNumber() + " " + m.isStudent() + " " + m.getNum());
-        }
+//        for (Member m : library.memberList) {
+//            System.out.println(m.getName() + " " + m.getNumber() + " " + m.isStudent() + " " + m.getNum());
+//        }
+
 
         sc.close();
 

@@ -13,6 +13,14 @@ public class Member {
         this.number = number;
         this.student = student;
     }
+    public Member(String name, String number, boolean student, int seat) {
+        this(name, number, student);
+        this.seat = seat;
+    }
+
+    public void setSeat(int seat) {
+        this.seat = seat;
+    }
 
     public boolean isStudent() {
         return student;
@@ -28,11 +36,6 @@ public class Member {
 
     public int getSeat() {
         return seat;
-    }
-
-    // 자리 설정
-    public void setSeat(int seat) {
-        this.seat = seat;
     }
 
     // 시간당 가격 * 3 반환
